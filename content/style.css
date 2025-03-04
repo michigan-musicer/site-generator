@@ -1,0 +1,49 @@
+.navigation {
+  display: none
+}
+
+.caveat {
+  color: black;
+  background-color: orange;
+  border-top: 10px solid darkorange;
+  border-bottom: 10px solid darkorange;
+  border-left: 10px solid darkorange;
+  border-right: 10px solid darkorange;
+  margin: 10px;
+}
+
+.opinion {
+  color: black;
+  background-color: salmon;
+  border-top: 10px solid darksalmon;
+  border-bottom: 10px solid darksalmon;
+  border-left: 10px solid darksalmon;
+  border-right: 10px solid darksalmon;
+  margin: 10px;
+}
+
+.numbers {
+  color: black;
+  background-color: greenyellow;
+  border-top: 10px solid green;
+  border-bottom: 10px solid green;
+  border-left: 10px solid green;
+  border-right: 10px solid green;
+  margin: 10px;
+}
+
+blockquote {
+  color: darkgray;
+  background-color: lightgray;
+  border-top: 10px solid gray;
+  border-bottom: 10px solid gray;
+  border-left: 10px solid gray;
+  border-right: 10px solid gray;
+  
+}
+
+aside {
+  font-style: italic;
+  border-top: solid 1px blue;
+  border-bottom: solid 1px blue;
+}
