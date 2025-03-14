@@ -12,9 +12,29 @@
   margin: 10px;
 }
 
-.opinion {
+.value {
   color: black;
-  background-color: salmon;
+  background-color: lightblue;
+  border-top: 10px solid darksalmon;
+  border-bottom: 10px solid darksalmon;
+  border-left: 10px solid darksalmon;
+  border-right: 10px solid darksalmon;
+  margin: 10px;
+}
+
+.caution {
+  color: black;
+  background-color: yellow;
+  border-top: 10px solid darksalmon;
+  border-bottom: 10px solid darksalmon;
+  border-left: 10px solid darksalmon;
+  border-right: 10px solid darksalmon;
+  margin: 10px;
+}
+
+.unqualified {
+  color: black;
+  background-color: red;
   border-top: 10px solid darksalmon;
   border-bottom: 10px solid darksalmon;
   border-left: 10px solid darksalmon;
@@ -31,6 +51,17 @@
   border-right: 10px solid green;
   margin: 10px;
 }
+
+.TODO {
+  color: purple;
+  background-color: lime;
+  border-top: 10px solid green;
+  border-bottom: 10px solid green;
+  border-left: 10px solid green;
+  border-right: 10px solid green;
+  margin: 10px;
+}
+
 
 blockquote {
   color: darkgray;

@@ -17,6 +17,8 @@ For some people, answering these soft questions is not so difficult. For others,
 <!-- This should start with credit to others once you have others to credit. --->
 {caveat}: When you take advice from someone, it should matter how trustworthy that person is (ethos and all that). To that end, my qualifications: I am an incoming PhD student at **insert PhD here**. I graduated from a top 10 university for computer science (University of Michigan) with bachelor's and master's degrees in computer science. I worked two summer internships, participated in undergraduate and graduate-level research, and worked as a teaching assistant for four semesters in three different classes. In 2023-2024 I served as a Fulbright Scholar in Poland, where I taught English and computer science in a rural Polish city (cześć studenci!). I applied for full-time entry level roles in mid-2024, landed two offers, took one, then applied for PhDs starting in 2025 and landed two offers. 
 
+More importantly, I have met a lot of people who have taught me a lot and shown me perspectives outside of my own. The breadth of perspective I believe separates this book from a typical advice column.
+
 In short, I have experienced a lot of things and can speak to a lot of different paths in life. However, I'm not necessarily the best to ask about each individual path, especially if you put weight on a program's "prestige level" (I am not a FAANG engineer or a PhD at a top 5 school with a long list of publications). You should decide for yourself if that disqualifies my advice from applying to you.
 
 This book is largely based on my experiences, but I have done my best to draw from other experiences and read up on relevant research to support these takes.

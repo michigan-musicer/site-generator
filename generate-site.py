@@ -38,8 +38,8 @@ class engine:
 
   def parse_frontmatter(self):
     if self.lines[self.line_number] != '---':
-      stderr.write(f'{self.filename} not at frontmatter')
-      exit(1)
+      stderr.write(f'{self.filename} has no frontmatter, not parsing frontmatter\n')
+      return None
     
     frontmatter = {}
     self.m_readline()
@@ -56,18 +56,23 @@ class engine:
       self.filename = os.path.join(MARKDOWN_FOLDER, file)
       outfile = os.path.join(OUT_FOLDER, file.replace('.md', '.html'))
       if not self.filename.endswith('.md'):
-        stderr.write(f'{self.filename} is not a markdown file\n')
-        exit(1)
+        stderr.write(f'{self.filename} is not a markdown file, continuing\n')
+        continue
       
       with open(self.filename, 'r') as f, open(outfile, 'w') as out:
         self.lines = f.read().splitlines()
+        if len(self.lines) == 0:
+          stderr.write(f'{self.filename} is empty, continuing\n')
+          continue
         self.line_number = 0
+
         
         frontmatter = self.parse_frontmatter()
         
         out.write('<html lang="en">\n')
         out.write('<head>\n')
-        out.write(f'<title>{frontmatter["title"]}</title>\n')
+        if frontmatter:
+          out.write(f'<title>{frontmatter["title"]}</title>\n')
         out.write('<link rel="stylesheet" type="text/css" href="style.css"/>\n')
         out.write('<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css">\n')
         out.write('</head>\n')
@@ -138,15 +143,30 @@ class engine:
               out.write(f'<div class="caveat">\n<h3>CAVEAT</h3><p>{self.m_processline(line)}</p>\n')
             elif line.startswith('{/caveat}'):
               out.write('</div>\n')
-            elif line.startswith('{opinion}:'):
+            elif line.startswith('{value}:'):
               line = line[line.find(':') + 1:].strip()
-              out.write(f'<div class="opinion">\n<h3>OPINION</h3><p>{self.m_processline(line)}</p>\n')
-            elif line.startswith('{/opinion}'):
+              out.write(f'<div class="value">\n<h3>VALUE JUDGEMENT</h3><p>{self.m_processline(line)}</p>\n')
+            elif line.startswith('{/value}'):
+              out.write('</div>\n')
+            elif line.startswith('{caution}:'):
+              line = line[line.find(':') + 1:].strip()
+              out.write(f'<div class="caution">\n<h3>A WORD OF CAUTION</h3><p>{self.m_processline(line)}</p>\n')
+            elif line.startswith('{/caution}'):
+              out.write('</div>\n')
+            elif line.startswith('{unqualified}:'):
+              line = line[line.find(':') + 1:].strip()
+              out.write(f'<div class="unqualified">\n<h3>WHERE I&apos;M NOT QUALIFIED</h3><p>{self.m_processline(line)}</p>\n')
+            elif line.startswith('{/unqualified}'):
               out.write('</div>\n')
             elif line.startswith('{numbers}:'):
               line = line[line.find(':') + 1:].strip()
               out.write(f'<div class="numbers">\n<h3>BY THE NUMBERS</h3><p>{self.m_processline(line)}</p>\n')
             elif line.startswith('{/numbers}'):
+              out.write('</div>\n')
+            elif line.startswith('{TODO}:'):
+              line = line[line.find(':') + 1:].strip()
+              out.write(f'<div class="TODO">\n<h3>TODO</h3><p>{self.m_processline(line)}</p>\n')
+            elif line.startswith('{/TODO}'):
               out.write('</div>\n')
           else:
             out.write(f'<p>{self.m_processline(line)}</p>\n')

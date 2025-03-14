@@ -1,0 +1,100 @@
+<!-- This will be laid out like a table of contents, don't worry about it for now 
+
+- Introduction
+    - About
+        - How this is organized
+- Necessities (prerequisites to get down before succeeding in college)
+    - technically it is possible to succeed without getting these down,
+        but you probably want to get these down and having them down will be
+        highly beneficial in the long term
+    - Health
+        - Physical
+            - Sleep
+            - Exercise
+            - Food / nutrition
+        - Mental / emotional / spiritual / ...
+            - seeking and setting up accommodations (e.g.
+               extra time for stuff and all that)
+            - hobbies and keeping time for them
+        - (we could put occupational health for the lols)
+        - crisis points and how to handle them?
+            - not qualified
+            - just say here to seek profesional help 
+    - Social skills
+        - how to make friends? this feels potentially problematic but
+        there are some things that that people don't seem to get always
+        - community
+        - being part of a community
+        - "Networking"
+        - (do we get into messy stuff like -isms and politics here?)
+    - Money shtuff
+        - not qualified
+        - peer pressure
+        - how to save
+        - utilizing campus resources
+            - examples from Michigan (speicifc and general)
+            - accommodations, uni services
+            - finding specific communities (ethnic, first-gen, etc.)
+        - see https://docs.google.com/document/d/1Ou-AelCrAg6soUJVbiviKAGBGF276w-UBlw-eMigwOA/edit?tab=t.0
+          and reach out to Lauren Schandevel (schandla@umich.edu) 
+          for guidance once you reach a good point
+    - Resources
+        - advisors, professors, clubs, organizations, ... etc.
+        - navigating bureaucracy, particularly layers of bureaucracy
+            - time, reasons why things take time...
+- Way of Working (how to get stuff done)
+    - Goal-setting
+        - what might you want out of life?
+        - actual tips for goal setting
+        - peer pressure
+        - doing vs planning (do more than plan, value judgement)
+    - Balancing
+        - Work-life balance
+        - Goal balancing (i.e. balancing professional goals)
+    - How to handle success
+        - how to keep growing when you are doing well rather 
+          than resting on your laurels or burning out or...
+        - burnout and imposter syndrome avoidance
+        - growing continously
+            - something that you're familiar with + confident in, 
+              something that challengees u
+    - actually working on stuff
+        - projects?
+        - team projects
+    - teamwork
+        - finding good teams
+        - how to handle bad teams
+    -
+- Industry Track
+    - the interview pipeline (this is intro material)
+        - emphasize that these take a couple of tries and that nothing is guaranteed
+    - opportunities in industry
+    - connections and networking
+    - resume
+    - leetcode
+    - how to target applications
+    - OAs
+    - practicing for live interviews
+    - technical questions (really similar to OAs probably)
+    - soft skill questions
+- Graduate School Track (masters is more like 
+        a continuation of undergrad and won't be covered)
+    - research and reasons to do a phd
+    - building relationships with professors
+    - getting into a lab
+        - opportunities generally more limited so take what you can get
+            - do some more research on this
+    - publications
+    - the actual application portion
+        - including interview
+- Miscellaneous (this is where all the rants go)
+    - social impact
+        - hobbesian vs rosseau-ean view of human nature
+        - friedman doctrine in theory and in practice
+        - non-profits
+        - academic work
+    - breadth vs depth in a professional career
+    - 
+    
+    
+-->
