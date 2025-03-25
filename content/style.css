@@ -1,5 +1,60 @@
+/* sidenotes are working but proportions are all messed up - we'll need to figure this out */
+
+@charset "UTF-8";
+
+body {
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12.5%;
+
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  color: #2F65A7;
+  background-color: #FEFFEC;
+  max-width: 1400px;
+  counter-reset: sidenote-counter;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', 'Oswald', serif; }
+
+html {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
 .navigation {
-  display: none
+  /* display: none */
+  color: white;
+  background-color: #00274C;
+  padding: 4px;
+}
+
+.main {
+  padding: 12px;
 }
 
 .caveat {
@@ -72,9 +127,108 @@ blockquote {
   border-right: 10px solid gray;
   
 }
+/* 
+@media (max-width: 799px) {
+  body {
+  } 
 
-aside {
-  font-style: italic;
-  border-top: solid 1px blue;
-  border-bottom: solid 1px blue;
+  .navigation {
+  }
+
+  .main {
+  }
+} */
+
+/* Modified from tufte-css at https://github.com/edwardtufte/tufte-css/ */
+
+.sidenote,
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: -40%;
+    width: 40%;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    vertical-align: baseline;
+    position: relative;
+}
+
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+  font-family: et-book-roman-old-style;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.sidenote-number:after {
+  content: counter(sidenote-counter);
+  font-size: 1rem;
+  top: -0.5rem;
+  left: 0.1rem;
+}
+
+.sidenote:before {
+  content: counter(sidenote-counter) " ";
+  font-size: 1rem;
+  top: -0.5rem;
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+  margin-right: -82%;
+  min-width: 59%;
+  text-align: left;
+}
+
+input.margin-toggle {
+  display: none;
+}
+
+label.sidenote-number {
+    display: inline;
+}
+
+label.margin-toggle:not(.sidenote-number) {
+    display: none;
+}
+
+/* The mobile fallback: */
+@media screen and (max-width: 699px) {
+    label.margin-toggle:not(.sidenote-number) {
+        display: inline;
+    }
+
+    .sidenote,
+    .marginnote {
+        display: none;
+    }
+    .margin-toggle:checked + .sidenote,
+    .margin-toggle:checked + .marginnote {
+        display: block;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+        margin: 1rem 2.5%;
+        vertical-align: baseline;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    display: inline-flex;
+  } 
+
+  .navigation {
+    width: 350px;
+  }
+
+  .main {
+    width: calc(100% - 350px)
+  }
 }

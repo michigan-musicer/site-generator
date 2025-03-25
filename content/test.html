@@ -1,24 +1,16 @@
 <html lang="en">
 <head>
-<title>Title of the thing</title>
-<link rel="stylesheet" type="text/css" href="style.css"/>
+<title>Title of the thing | Title of the book</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" type="text/css" href="style.css"/>
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="navigation">
-<ol>
-<li>Introduction</li>
-<li>Way of Working</li>
-<li>Industry Track</li>
-<li>Graduate School Track</li>
-<li>Miscellaneous</li>
-</ol>
-</div>
-<h1>Heading</h1>
+<div class="main"><h1>Title of the thing</h1><hr/><h1>Heading</h1>
 <h2>subheading</h2>
 <h3>subsubheading</h3>
 <h4>subsubsubheading</h4>
 <p>Some text!</p>
+<p>Sidenotes go in text<label for="sn-0" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-0" class="margin-toggle"><span class="sidenote">A sidenote is implemented via tufte-css. If we need to revise this, reference https://gwern.net/sidenote.</span>.</p>
 <p>Here's an apostrophe.</p>
 <p>Text with a footnote.</p>
 <ul>
@@ -26,7 +18,7 @@
 <li>item 2.</li>
 <li>item 3.</li>
 </ul>
-<aside>A footnote is implemented as an aside element. Doesn't have to follow typical markdown usage like we've had in the past, but if so do keep in mind footnoes cannot be lazily placed and found.</aside>
+<p>Ensure that multiple sidenotes work<label for="sn-1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-1" class="margin-toggle"><span class="sidenote">Tufte style sidenotes must be far away from each other to render nicely.</span>.</p>
 </ul>
 <p>Some text that is <b>bold</b>, <em>emphasized</em>, and <b><em>both</b></em>.</p>
 </ul>
@@ -71,5 +63,5 @@
 <h3>TODO</h3><p>todo.</p>
 </ul>
 </div>
-</body>
+</div></body>
 </html>

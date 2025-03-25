@@ -13,6 +13,8 @@ tags: ["tag1", "tag2"]
 
 Some text!
 
+Sidenotes go in text^^A sidenote is implemented via tufte-css. If we need to revise this, reference https://gwern.net/sidenote.^^.
+
 Here's an apostrophe.
 
 Text with a footnote.
@@ -21,7 +23,7 @@ Text with a footnote.
 - item 2.
 - item 3.
 
-[^0]: A footnote is implemented as an aside element. Doesn't have to follow typical markdown usage like we've had in the past, but if so do keep in mind footnoes cannot be lazily placed and found.
+Ensure that multiple sidenotes work^^Tufte style sidenotes must be far away from each other to render nicely.^^.
 
 Some text that is **bold**, *emphasized*, and ***both***.
 

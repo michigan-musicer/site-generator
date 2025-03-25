@@ -11,6 +11,14 @@ class engine:
     self.outfile = None
     self.lines = None
     self.line_number = None
+    self.sidenote_id = 0
+    
+  def m_reset(self):
+    self.line_number = 0
+    self.sidenote_id = 0
+  
+  def m_increment_sidenote_id(self):
+    self.sidenote_id += 1
 
   def m_done(self):
     return self.line_number == len(self.lines)
@@ -25,15 +33,29 @@ class engine:
     while line.find('**') != -1:
       line = line.replace('**', '<b>', 1)
       if line.find('**') == -1:
-        stderr.write('opening ** misisng closing **')
+        stderr.write('opening ** missing closing **')
         exit(1)
       line = line.replace('**', '</b>', 1)
     while line.find('*') != -1:
       line = line.replace('*', '<em>', 1)
       if line.find('*') == -1:
-        stderr.write('opening * misisng closing *')
+        stderr.write('opening * missing closing *')
         exit(1)
       line = line.replace('*', '</em>', 1)
+    # sidenotes
+    while line.find('^^') != -1:
+      start = line.find('^^')
+      end = line.find('^^', start + 1)
+      if end == -1:
+        stderr.write('opening ** missing closing ^^')
+        exit(1)
+      sidenote_id = f"sn-{str(self.sidenote_id)}"
+      sidenote = f'<label for="{sidenote_id}" class="margin-toggle sidenote-number"></label>' + \
+                 f'<input type="checkbox" id="{sidenote_id}" class="margin-toggle">' + \
+                 f'<span class="sidenote">{line[start + 2:end]}</span>'
+      line = line[:start] + sidenote + line[end + 2:]
+
+      self.m_increment_sidenote_id()
     return line
 
   def parse_frontmatter(self):
@@ -53,6 +75,8 @@ class engine:
 
   def main(self):
     for file in os.listdir(MARKDOWN_FOLDER):
+      self.m_reset()
+
       self.filename = os.path.join(MARKDOWN_FOLDER, file)
       outfile = os.path.join(OUT_FOLDER, file.replace('.md', '.html'))
       if not self.filename.endswith('.md'):
@@ -64,7 +88,6 @@ class engine:
         if len(self.lines) == 0:
           stderr.write(f'{self.filename} is empty, continuing\n')
           continue
-        self.line_number = 0
 
         
         frontmatter = self.parse_frontmatter()
@@ -72,7 +95,8 @@ class engine:
         out.write('<html lang="en">\n')
         out.write('<head>\n')
         if frontmatter:
-          out.write(f'<title>{frontmatter["title"]}</title>\n')
+          out.write(f'<title>{frontmatter["title"]} | Title of the book</title>\n')
+        out.write('<meta name="viewport" content="width=device-width, initial-scale=1"/>')
         out.write('<link rel="stylesheet" type="text/css" href="style.css"/>\n')
         out.write('<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css">\n')
         out.write('</head>\n')
@@ -86,15 +110,20 @@ class engine:
         # - Miscellaneous
         # and hardcode this into the script that writes this to outfile.
         # It may be better to separate this out later (esp to add chapters, but let's not overneigneer like always lol).
-        out.write('<div class="navigation">\n')
-        out.write('<ol>\n')
-        out.write('<li>Introduction</li>\n')
-        out.write('<li>Way of Working</li>\n')
-        out.write('<li>Industry Track</li>\n')
-        out.write('<li>Graduate School Track</li>\n')
-        out.write('<li>Miscellaneous</li>\n')
-        out.write('</ol>\n')
-        out.write('</div>\n')
+        # out.write('<div class="navigation">\n')
+        # out.write('<ol>\n')
+        # out.write('<li>Introduction</li>\n')
+        # out.write('<li>Way of Working</li>\n')
+        # out.write('<li>Industry Track</li>\n')
+        # out.write('<li>Graduate School Track</li>\n')
+        # out.write('<li>Miscellaneous</li>\n')
+        # out.write('</ol>\n')
+        # out.write('</div>\n')
+        
+        out.write('<div class="main">')
+        
+        out.write(f'<h1>{frontmatter["title"]}</h1>')
+        out.write('<hr/>')
         
         in_ul = False
         while not self.m_done():
@@ -129,11 +158,7 @@ class engine:
               out.write(f'<ul>\n')
             line = line[line.find('-') + 1:].strip()
             out.write(f'<li>{self.m_processline(line)}</li>\n')
-          elif line.startswith('[^'):
-            # NOTE: could add error checking for footnote numbers but who really cares?
-            # that is for developer convenience and we don't save much by doing that
-            line = line[line.find(':') + 1:].strip()
-            out.write(f'<aside>{self.m_processline(line)}</aside>\n')
+          
           elif line.startswith('>'):
             line = line[line.find(':') + 1:].strip()
             out.write(f'<blockquote>{self.m_processline(line)}</blockquote>\n')
@@ -170,6 +195,8 @@ class engine:
               out.write('</div>\n')
           else:
             out.write(f'<p>{self.m_processline(line)}</p>\n')
+        
+        out.write('</div>') # /main
         
         out.write('</body>\n')
         out.write('</html>\n')

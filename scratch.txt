@@ -77,6 +77,17 @@
     - teamwork
         - finding good teams
         - how to handle bad teams
+<<<<<<< HEAD
+=======
+            - what kind of bad? just dysfunctional...
+                - 5 pillars of dysfunctional teams
+                - can be mitigated within the team by difficult communciation and such
+            - or outright toxic?
+                - irreparably bad because people are clearly deprioritizing individuals (and their health and sanity) or believe that certain maladaptive behaviors are okay
+                - without quantitative evidence, does seem more common the higher up in the hierarchy you go - high achievement at some point suggests cutting corners and/or savaging your peers
+                - basically impossible to mitigate, especially if you are a junior or otherwise powerless, and you should instead mitigate the impact on your career and find an exit as soon as possible
+            - 
+>>>>>>> c4d60f3 (more commit lol)
         - politics
             - realistically a politics discussion is more for when you actually go out and start an industry position, so this is probably extra content and not main. But should be really important and in the forefront of people's minds 
     -
@@ -95,6 +106,15 @@
     - soft skill questions
 - Graduate School Track (masters is more like 
         a continuation of undergrad and won't be covered)
+<<<<<<< HEAD
+=======
+    - don't
+        - consider literally every option that is not this
+        - and weigh it against how badly you want it
+        - especially in 2025 onward in the US with funding questions
+        - do IF:
+            - you 
+>>>>>>> c4d60f3 (more commit lol)
     - what matters most is your advisor, second-most important is advisor, third-most important is advisor - the most important thing is your advisor, it's your advisor, it's your advisor
         - 
     - research and reasons to do a phd
@@ -134,3 +154,19 @@ ideas
   - the name brand schools don't offer much different from the non-name brands *until* you push yourself to a certain point - then they start to show significant differences
   - accordingly, I question whether those schools should focus on supporting their most successful students or "provide for the common-folk"
 
+- As a rule of thumb, wait 3 months before opening up to people, especially colleagues
+
+
+- stress management
+    - stress plainly gets in the way of you doing things because you are an information worker, and stress gets in the way of managing information
+        - any white collar job is about managing information
+        - stress should be seen as a health thing, but should also be seen as a professionalism thing - if you want to do a good job, you should learn how to manage your stress
+        - managing stress != completely eliminating stress, but more so usually minimizing it so that it doesn't harm you as badly
+    - micro level: time management, allocate break time each day and each week
+        - do accept that this will be infringed upon - or don't, up to you, but most people i know have at least had to switch when their break time is
+        - failure: this *should* be a stressor but only when the failure actually matters
+            - "matters" is relative - a class matters in the short term, for example, so an exam might matter - but the exam might not decide your class grade (esp with curving) and 
+    - macro level
+        - uncertainty: this never really goes away, esp in the US with the way healthcare is (when you get older and have to put more of your expenses towards healthcare that is)
+        - much harder
+        - failures at macromanagement lead to problems in micromanagement
