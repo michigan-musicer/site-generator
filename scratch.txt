@@ -3,6 +3,12 @@
 - Introduction
     - About
         - How this is organized
+    - Mindset of this book
+        - assuming you want *long-term* success in a field of CS 
+        - assuming you are someone who may have strong interests outside of CS (hence discussion of balance things in the first section)
+            - not a one-track book of guidance in that sense - other advice may be more "concentrated" so to speak
+        - I do not know everything so I have tried to support with studies / other people's anecdotes as much as possible to generalize more
+            - still take everything with salt - you shouldn't listen to a 24-year-old just because they are exceptionally successful, and I am only vaguely successful tbh 
 - Necessities (prerequisites to get down before succeeding in college)
     - technically it is possible to succeed without getting these down,
         but you probably want to get these down and having them down will be
@@ -43,9 +49,19 @@
         - navigating bureaucracy, particularly layers of bureaucracy
             - time, reasons why things take time...
 - Way of Working (how to get stuff done)
+    - How to learn
+        - single most important skill as an information worker
+        - 
+    - actually working on stuff
+        - projects?
+        - team projects
+        - what to do when a project stalls 
+        - 
     - Goal-setting
         - what might you want out of life?
         - actual tips for goal setting
+        - typical strong long-term goals: standing in community, impact, etc. (these things keep your career going)
+            - short-term goals: money, benefits, etc (these are good but don't keep your career afloat necessarily - they make life better more than anything)
         - peer pressure
         - doing vs planning (do more than plan, value judgement)
     - Balancing
@@ -58,17 +74,17 @@
         - growing continously
             - something that you're familiar with + confident in, 
               something that challengees u
-    - actually working on stuff
-        - projects?
-        - team projects
     - teamwork
         - finding good teams
         - how to handle bad teams
+        - politics
+            - realistically a politics discussion is more for when you actually go out and start an industry position, so this is probably extra content and not main. But should be really important and in the forefront of people's minds 
     -
 - Industry Track
     - the interview pipeline (this is intro material)
         - emphasize that these take a couple of tries and that nothing is guaranteed
     - opportunities in industry
+        - FAANG, defense, government, startups, F500, games, ...
     - connections and networking
     - resume
     - leetcode
@@ -79,6 +95,8 @@
     - soft skill questions
 - Graduate School Track (masters is more like 
         a continuation of undergrad and won't be covered)
+    - what matters most is your advisor, second-most important is advisor, third-most important is advisor - the most important thing is your advisor, it's your advisor, it's your advisor
+        - 
     - research and reasons to do a phd
     - building relationships with professors
     - getting into a lab
@@ -98,3 +116,21 @@
     
     
 -->
+
+
+ideas
+
+- be suspicious of advice that completely ignores or dismisses the present day; good advice should at least consider what is going on now
+  - advice gets outdated (so don't trust a self help book from the 70s necessarily)
+- You should always have a next move (re: goals)
+- workaholism vs passion vs 
+  - in particular, don't make yourself a workaholic because you see passionate people around you - if you aren't as passionate then you aren't as passionate
+  - at the same time do try to find what you are passionate about because you really don't want to spend 40 hours a week doing something you despise
+- there's a big difference between being a good citizen and being a sucker, but you often can't find that line without A: understanding "how things work" and/or B: being in the "in" circle in the field you want to go into
+  - classic example: go out to do some social-impact focused work with people who don't actually see it the same way (e.g. they're doing it for the grant money or they're doing it )
+    - specific case that came up in Poland: wanting to work for a defense company to produce weapons to supply to Eastern Europe to defend against Russia - but then those weapons are sold to other parts of the world (re: Israel) 
+  - another classic example: working for a company that preaches support of XYZ group that in practice doesn't have a lot of in place in the actual corporate structure to support XYZ group
+- If you're going to a school because of the name brand reputaiton, you'll want to push yourself to be close to the max at your institution for whatever thing you're pursuing
+  - the name brand schools don't offer much different from the non-name brands *until* you push yourself to a certain point - then they start to show significant differences
+  - accordingly, I question whether those schools should focus on supporting their most successful students or "provide for the common-folk"
+
